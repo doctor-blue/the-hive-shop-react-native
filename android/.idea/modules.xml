@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the_hive_shop.iml" filepath="$PROJECT_DIR$/.idea/modules/the_hive_shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/the_hive_shop.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/the_hive_shop.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/522001764/the_hive_shop.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/522001764/the_hive_shop.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/650457075/the_hive_shop.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/650457075/the_hive_shop.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/101188169/the_hive_shop.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/101188169/the_hive_shop.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1324607588/the_hive_shop.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-1324607588/the_hive_shop.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-503903564/the_hive_shop.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-503903564/the_hive_shop.react-native-screens.iml" />
+    </modules>
+  </component>
+</project>
