@@ -1,16 +1,16 @@
 'use strict';
 
 import React from 'react';
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
+import { View, StyleSheet, Image, ScrollView } from 'react-native';
 import ImgBee from '../../assets/images/bee.png';
 import Sizes from '../../constants/Sizes'
 import TheHiveButton from '../../elements/TheHiveButton';
 import TheHiveInput from '../../elements/TheHiveInput';
 import Title from '../../elements/TheHiveTitle';
+import Routes from '../../constants/Routes';
 
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     return (
         <ScrollView style={styles.container}>
             <Image source = {ImgBee} 
@@ -21,16 +21,20 @@ const LoginScreen = () => {
             </View>
             <View style={styles.input}>
                 <TheHiveInput hint='Username'
-                    isPassword={false}/>
+                    isPassword={false}
+                    />
                 <TheHiveInput hint='Password'
-                    isPassword={true}/>
+                    isPassword={true}
+                    />
             </View>
             <View style={styles.button}>
                 <TheHiveButton text='SIGN IN'
-                    isActiveButton={true}/>
+                    isActiveButton={true}
+                    />
 
                 <TheHiveButton text='SIGN UP'
-                    isActiveButton={false}/>
+                    isActiveButton={false}
+                    onPress={() => {navigation.navigate(Routes.Register)}}/>
             </View>
         </ScrollView>
     );

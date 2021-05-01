@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Routes from './src/constants/Routes';
 import LoginScreen from './src/screens/login';
-import RegisterScreen from './src/screens';
+import RegisterScreen from './src/screens/register';
 
 const Stack = createStackNavigator();
 

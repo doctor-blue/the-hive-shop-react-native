@@ -12,7 +12,8 @@ const TheHiveButton = (props) => {
     let isActiveText = props.isActiveButton ? styles.activeText : styles.negativeText;
 
     return (
-        <TouchableOpacity style={isActiveButton}>
+        <TouchableOpacity style={isActiveButton}
+            onPress={props.onPress}>
             <Text style={isActiveText}>
                 {props.text}
             </Text>
