@@ -16,8 +16,8 @@ const LoginScreen = ({navigation}) => {
             <Image source = {ImgBee} 
                 style={styles.logo}/>
             <View style={styles.title}>
-                <Title text='WELCOME' />
-                <Title text='BACK' />
+                <Title text='WELCOME' isBig={true}/>
+                <Title text='BACK' isBig={true}/>
             </View>
             <View style={styles.input}>
                 <TheHiveInput hint='Username'
@@ -30,6 +30,7 @@ const LoginScreen = ({navigation}) => {
             <View style={styles.button}>
                 <TheHiveButton text='SIGN IN'
                     isActiveButton={true}
+                    onPress={() => {navigation.navigate(Routes.Product)}}
                     />
 
                 <TheHiveButton text='SIGN UP'

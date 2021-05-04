@@ -1,42 +1,45 @@
 'use strict';
 
 import React from 'react';
-import { View, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import ImgBee from '../../assets/images/bee.png';
 import Sizes from '../../constants/Sizes'
 import TheHiveButton from '../../elements/TheHiveButton';
 import TheHiveInput from '../../elements/TheHiveInput';
-import Title from '../../elements/TheHiveTitle';
+import TheHiveTitle from '../../elements/TheHiveTitle';
 
-const RegisterScreen = ({navigation}) => {
+const RegisterScreen = ({ navigation }) => {
     return (
-        <ScrollView style={styles.container}>
-            <Icon name='arrow-back' 
-                size={30} 
-                style={styles.navIcon}
-                onPress={() => {navigation.goBack()}}/>
-            <Image source = {ImgBee} 
-                style={styles.logo}/>
-            <View style={styles.title}>
-                <Title text='CREATE ACCOUNT' />
-            </View>
-            <View style={styles.input}>
-                <TheHiveInput hint='Username'
-                    isPassword={false}/>
-                <TheHiveInput hint='Password'
-                    isPassword={true}/>
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <Icon name='arrow-back'
+                    size={30}
+                    style={styles.navIcon}
+                    onPress={() => { navigation.goBack() }} />
+                <Image source={ImgBee}
+                    style={styles.logo} />
+                <View style={styles.title}>
+                    <TheHiveTitle text='CREATE ACCOUNT' 
+                        isBig={true}/>
+                </View>
+                <View style={styles.input}>
+                    <TheHiveInput hint='Username'
+                        isPassword={false} />
+                    <TheHiveInput hint='Password'
+                        isPassword={true} />
 
-                <TheHiveInput hint='Retype Password'
-                    isPassword={true}/>
-            </View>
-            <View style={styles.button}>
-                <TheHiveButton text='SIGN UP'
-                    isActiveButton={false}
-                    onPress={() => {navigation.goBack()}} />
-            </View>
-        </ScrollView>
+                    <TheHiveInput hint='Retype Password'
+                        isPassword={true} />
+                </View>
+                <View style={styles.button}>
+                    <TheHiveButton text='SIGN UP'
+                        isActiveButton={false}
+                        onPress={() => { navigation.goBack() }} />
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 
