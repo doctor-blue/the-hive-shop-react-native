@@ -11,6 +11,7 @@ target 'the_hive_shop' do
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :hermes_enabled => false
   )
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'the_hive_shopTests' do
     inherit! :complete
