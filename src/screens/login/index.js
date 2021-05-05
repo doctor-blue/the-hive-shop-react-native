@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { View, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
 import ImgBee from '../../assets/images/bee.png';
 import Sizes from '../../constants/Sizes'
 import TheHiveButton from '../../elements/TheHiveButton';
@@ -10,34 +10,36 @@ import Title from '../../elements/TheHiveTitle';
 import Routes from '../../constants/Routes';
 
 
-const LoginScreen = ({navigation}) => {
+const LoginScreen = ({ navigation }) => {
     return (
-        <ScrollView style={styles.container}>
-            <Image source = {ImgBee} 
-                style={styles.logo}/>
-            <View style={styles.title}>
-                <Title text='WELCOME' isBig={true}/>
-                <Title text='BACK' isBig={true}/>
-            </View>
-            <View style={styles.input}>
-                <TheHiveInput hint='Username'
-                    isPassword={false}
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.container}>
+                <Image source={ImgBee}
+                    style={styles.logo} />
+                <View style={styles.title}>
+                    <Title text='WELCOME' isBig={true} />
+                    <Title text='BACK' isBig={true} />
+                </View>
+                <View style={styles.input}>
+                    <TheHiveInput hint='Username'
+                        isPassword={false}
                     />
-                <TheHiveInput hint='Password'
-                    isPassword={true}
+                    <TheHiveInput hint='Password'
+                        isPassword={true}
                     />
-            </View>
-            <View style={styles.button}>
-                <TheHiveButton text='SIGN IN'
-                    isActiveButton={true}
-                    onPress={() => {navigation.navigate(Routes.Product)}}
+                </View>
+                <View style={styles.button}>
+                    <TheHiveButton text='SIGN IN'
+                        isActiveButton={true}
+                        onPress={() => { navigation.navigate(Routes.Product) }}
                     />
 
-                <TheHiveButton text='SIGN UP'
-                    isActiveButton={false}
-                    onPress={() => {navigation.navigate(Routes.Register)}}/>
-            </View>
-        </ScrollView>
+                    <TheHiveButton text='SIGN UP'
+                        isActiveButton={false}
+                        onPress={() => { navigation.navigate(Routes.Register) }} />
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 

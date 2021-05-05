@@ -4,6 +4,8 @@ const buttonHeight = 40;
 
 const headerHeight = 60;
 
+const settingItemHeight = 80;
+
 const smallText = 16;
 const normalText = 24;
 const bigText = 32;
@@ -24,6 +26,7 @@ const bigSpace = 64;
 module.exports = {
     buttonHeight,
     headerHeight,
+    settingItemHeight,
     smallText,
     normalText,
     bigText,

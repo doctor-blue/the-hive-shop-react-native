@@ -11,10 +11,10 @@ import TheHiveTitle from '../elements/TheHiveTitle';
 const TheHiveHeader = (props) => {
     return(
         <View style={styles.container}>
-            <IonIcon name='person-circle' size={Sizes.leadingIconSize} color={Colors.textColor} style={styles.leadingIcon} onPress={props.onLeadingIconPress} />
-            <TheHiveTitle text='The Hive Shop' style={styles.title}></TheHiveTitle>
-            <IonIcon name='ios-search' size={Sizes.actionIconSize} color={Colors.textColor} style={styles.actionIcon} onPress={props.onActionSearchPress} />
-            <MaterialCommunityIcons name='cart-outline' size={Sizes.actionIconSize} color={Colors.textColor} style={styles.actionIcon} onPress={props.onActionCartPress} />
+            <IonIcon name={props.leading} size={Sizes.leadingIconSize} color={Colors.textColor} style={styles.leadingIcon} onPress={props.onLeadingIconPress} />
+            <TheHiveTitle text={props.title}></TheHiveTitle>
+            <IonIcon name={props.action1} size={Sizes.actionIconSize} color={Colors.textColor} style={styles.actionIcon} onPress={props.onActionSearchPress} />
+            <MaterialCommunityIcons name={props.action2} size={Sizes.actionIconSize} color={Colors.textColor} style={styles.actionIcon} onPress={props.onActionCartPress} />
         </View>
     );
 };

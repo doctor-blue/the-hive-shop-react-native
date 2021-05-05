@@ -1,6 +1,6 @@
 'use strict'
 import React from 'react';
-import { FlatList, SafeAreaView, StyleSheet, View, Text, Image } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
 import TheHiveHeader from '../../components/TheHiveHeader';
 import Colors from '../../constants/Colors';
@@ -48,15 +48,29 @@ const listItemStyle = StyleSheet.create({
 const ProductScreen = ({navigation}) => {
 
     const renderItem = ({ item }) => (
-        <ListItem 
+        <TouchableOpacity onPress={() => {navigation.navigate(
+            Routes.ProductDetail, {
+                title: item.title,
+                url: item.url,
+                description: item.description,
+                price: item.price
+            }
+        )}}>
+            <ListItem 
             title={item.title} 
             url={item.url}
             price={item.price}/>
+        </TouchableOpacity>
+        
       );
 
     return (
         <SafeAreaView style={styles.container}>
             <TheHiveHeader
+                leading='person-circle'
+                action1='ios-search'
+                action2='cart-outline'
+                title='The Hive Shop'
                 onLeadingIconPress={() => {navigation.navigate(Routes.Setting)}}
                 onActionSearchPress={() => { }}
                 onActionCartPress={() => { }} />
