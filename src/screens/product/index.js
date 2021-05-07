@@ -12,7 +12,7 @@ const DATA = require('../../assets/data/products.json');
 const ListItem = ({ title, url, price }) => {
     return (
         <View style={listItemStyle.container}>
-            <Image source={{uri: url}} style={listItemStyle.image} />
+            <Image source={{ uri: url }} style={listItemStyle.image} />
             <Text>{title}</Text>
             <Text>{price}$</Text>
         </View>
@@ -41,28 +41,32 @@ const listItemStyle = StyleSheet.create({
     image: {
         width: 185,
         height: 150,
+        resizeMode: 'cover',
         borderRadius: Sizes.borderRadius,
     },
 });
 
-const ProductScreen = ({navigation}) => {
+const ProductScreen = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
-        <TouchableOpacity onPress={() => {navigation.navigate(
-            Routes.ProductDetail, {
+        <TouchableOpacity onPress={() => {
+            navigation.navigate(
+                Routes.ProductDetail, {
+                id: item.id,
                 title: item.title,
                 url: item.url,
                 description: item.description,
                 price: item.price
             }
-        )}}>
-            <ListItem 
-            title={item.title} 
-            url={item.url}
-            price={item.price}/>
+            )
+        }}>
+            <ListItem
+                title={item.title}
+                url={item.url}
+                price={item.price} />
         </TouchableOpacity>
-        
-      );
+
+    );
 
     return (
         <SafeAreaView style={styles.container}>
@@ -71,9 +75,9 @@ const ProductScreen = ({navigation}) => {
                 action1='ios-search'
                 action2='cart-outline'
                 title='The Hive Shop'
-                onLeadingIconPress={() => {navigation.navigate(Routes.Setting)}}
+                onLeadingIconPress={() => { navigation.navigate(Routes.Setting) }}
                 onActionSearchPress={() => { }}
-                onActionCartPress={() => { }} />
+                onActionCartPress={() => { navigation.navigate(Routes.Cart) }} />
             <FlatList
                 style={styles.flatList}
                 data={DATA}
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    
+
     flatList: {
         marginTop: Sizes.tinySpace,
     }

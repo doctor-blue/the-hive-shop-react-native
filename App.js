@@ -9,6 +9,7 @@ import RegisterScreen from './src/screens/register';
 import ProductScreen from './src/screens/product';
 import ProductDetailScreen from './src/screens/detail';
 import SettingScreen from './src/screens/setting';
+import CartScreen from './src/screens/cart';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const App = () => {
         <Stack.Screen name={Routes.Product} component={ProductScreen} />
         <Stack.Screen name={Routes.Setting} component={SettingScreen} />
         <Stack.Screen name={Routes.ProductDetail} component={ProductDetailScreen} />
+        <Stack.Screen name={Routes.Cart} component={CartScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

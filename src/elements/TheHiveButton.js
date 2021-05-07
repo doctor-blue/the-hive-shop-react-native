@@ -23,7 +23,8 @@ const TheHiveButton = (props) => {
 
 const styles = StyleSheet.create({
     activeContainer: {
-        marginTop: Sizes.smallSpace,
+        marginVertical: Sizes.tinySpace,
+        paddingHorizontal: Sizes.smallSpace,
         height: Sizes.buttonHeight,
         width: '100%',
         backgroundColor: Colors.accentColor,
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     },
 
     negativeContainer: {
-        marginTop: Sizes.smallSpace,
+        marginVertical: Sizes.tinySpace,
         height: Sizes.buttonHeight,
         width: '100%',
         backgroundColor: Colors.primaryColor,
@@ -61,11 +62,13 @@ const styles = StyleSheet.create({
     activeText: {
         fontSize: Sizes.smallText,
         color: Colors.textColor,
+        fontWeight: 'bold',
     },
 
     negativeText: {
         fontSize: Sizes.smallText,
         color: Colors.white,
+        fontWeight: 'bold',
     }
 });
 
